@@ -24,7 +24,7 @@ public class MovieScriptAnalysis {
         FileOutputFormat.setOutputPath(job1, new Path(args[2] + "/task1"));
         job1.waitForCompletion(true);
 
-        // Task 2: Dialogue Length Analysis
+        //Task 2: Dialogue Length Analysis
         Job job2 = Job.getInstance(conf, "Dialogue Length Analysis");
         job2.setJarByClass(MovieScriptAnalysis.class);
         job2.setMapperClass(DialogueLengthMapper.class);
